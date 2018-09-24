@@ -11,6 +11,5 @@ from TBspider.items import TbspiderItem
 class TbspiderPipeline(object):
     def process_item(self, item, spider):
         with open('./result.txt','w+')as f:
-            print('11111111111111111111')
             f.write(json.dumps(item))
         return item

@@ -23,8 +23,9 @@ class TbspiderSpider(scrapy.Spider):
         # pattren = re.compile(pt)  # pattern
         # content = pattren.search(doc).groups()[0] # select the content we need
         # print(content,11111)
-        content = doc.split('(')[1]
-        # print(content)
+        # content = doc.split('(')[1]
+        content = response
+        print(content)
         format_cont = json.loads(content)  # load to json
         item = TbspiderItem()
         # print(item)
