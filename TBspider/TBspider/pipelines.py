@@ -8,8 +8,9 @@ import json
 
 from TBspider.items import TbspiderItem
 
+
 class TbspiderPipeline(object):
     def process_item(self, item, spider):
-        with open('./result.txt','w+')as f:
-            f.write(json.dumps(item))
+        for one in item['items']:  # read every item in the page
+            pass  # 这里需要重组数据然后写入数据库
         return item

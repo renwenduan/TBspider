@@ -6,9 +6,9 @@
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
-from scrapy import Item,Field
+from scrapy import Field
 
-class TbspiderItem(Item):
+class TbspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     shop_id = Field()
@@ -16,11 +16,12 @@ class TbspiderItem(Item):
     shop_title = Field()
     total_page =Field()
     shop_Url = Field()
-    item_id =Field()
-    title =Field()
-    img = Field()
-    sold =Field()
-    quantity = Field()
-    totalSoldQuant = Field()
-    price = Field()
+    items = Field()
+    # item_id =Field()
+    # title =Field()
+    # img = Field()
+    # sold =Field()
+    # quantity = Field()
+    # totalSoldQuant = Field()
+    # price = Field()
     # item = {'item_id':item_id,'title':title,'img':img,'sold':sold,'quantity':quantity,'totalSoldQuant':totalSoldQuant,'price':price}

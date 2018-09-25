@@ -1,5 +1,5 @@
 
-from proxypool.scheduler import Scheduler
+from scheduler import Scheduler
 import sys
 import io
 

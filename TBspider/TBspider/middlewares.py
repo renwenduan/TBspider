@@ -4,8 +4,9 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
+import requests
 from scrapy import signals
+import logging
 
 
 class TbspiderSpiderMiddleware(object):
@@ -60,6 +61,7 @@ class TbspiderDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
+    logger = logging.getLogger(__name__)
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -78,6 +80,7 @@ class TbspiderDownloaderMiddleware(object):
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
+
         return None
 
     def process_response(self, request, response, spider):

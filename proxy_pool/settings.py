@@ -10,7 +10,7 @@ REDIS_PASSWORD = None
 REDIS_KEY = 'proxies'
 
 # 代理分数
-MAX_SCORE = 100
+MAX_SCORE = 10
 MIN_SCORE = 0
 INITIAL_SCORE = 10
 
@@ -20,12 +20,12 @@ VALID_STATUS_CODES = [200, 302]
 POOL_UPPER_THRESHOLD = 50000
 
 # 检查周期
-TESTER_CYCLE = 20
+TESTER_CYCLE = 10
 # 获取周期
 GETTER_CYCLE = 300
 
 # 测试API，建议抓哪个网站测哪个
-TEST_URL = 'http://www.baidu.com'
+TEST_URL = 'https://daohuaxiangshipin.m.tmall.com/shop/shop_auction_search.htm'
 
 # API配置
 API_HOST = '0.0.0.0'
@@ -37,4 +37,4 @@ GETTER_ENABLED = True
 API_ENABLED = True
 
 # 最大批测试量
-BATCH_TEST_SIZE = 10
+BATCH_TEST_SIZE = 25
